@@ -11,6 +11,7 @@ Make a new file with the .frag file type, name it whatever you want, and put it 
 
 Firstly, you have to paste this on top of your shader code :
 
+```
 #pragma header
 vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
 vec2 iResolution = openfl_TextureSize;
@@ -18,6 +19,7 @@ uniform float iTime;
 #define iChannel0 bitmap
 #define texture flixel_texture2D
 #define fragColor gl_FragColor
+```
 
 delete the void mainImage( out vec4 fragColor, in vec2 fragCoord) 
 and make it into this
