@@ -39,12 +39,15 @@ And that should be your shader file done.
 
 Step 3 : Putting the shader on a sprite
 This is probably the easiest part of this tutorial. Create a new .LUA file in your song's data folder, and inside any function, put :
-
+```
 initLuaShader('shaderName')
 setSpriteShader('objName', 'shaderName')
-
+```
 Obviously replace "shaderName" with the name of your shader, and replace "objName", with the object you want the shader to be applied to.
 
 If you've done everything correctly, your shader should give no errors and your shader should be applied to the object you specified.
 
-If you're wondering how to remove a shader from an object, just use removeSpriteShader('objName')
+If you're wondering how to remove a shader from an object, just use 
+```
+removeSpriteShader('objName')
+```
