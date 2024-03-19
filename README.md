@@ -17,7 +17,7 @@ vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
 vec2 iResolution = openfl_TextureSize;
 uniform float iTime;
 #define iChannel0 bitmap
-#define texture flixel_texture2D
+#define texture texture2D
 #define fragColor gl_FragColor
 ```
 
@@ -29,9 +29,9 @@ void main()
 
 if your shader turns black even tho you did everything right you need to add this code. this code adds alpha support so you can see your sprites 
 ```
-gl_FragColor.a = flixel_texture2D(bitmap, openfl_TextureCoordv).a;
+gl_FragColor.a = texture2D(bitmap, openfl_TextureCoordv).a;
 ```
-make sure to put this code on the bottom of fragColor = 
+make sure to put this code on the bottom of something like this fragColor = vec4(col,1.0);
 
 now, find the mainImage void in the shader, and remove it's parameters.
 
