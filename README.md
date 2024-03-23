@@ -19,8 +19,9 @@ uniform float iTime;
 #define iChannel0 bitmap
 #define texture texture2D
 #define fragColor gl_FragColor
-#define void mainImage( out vec4 fragColor, in vec2 fragCoord ) void main()
+#define mainImage main 
 ```
+delete the out vec4 fragColor, in vec2 fragCoord inside the bracket 
 
 if your shader turns black even tho you did everything right you need to add this code. this code adds alpha support so you can see your sprites 
 ```
